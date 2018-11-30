@@ -11,7 +11,6 @@ export MONO_HOME="/Library/Frameworks/Mono.framework/Versions/Current/Commands"
 export PATH="$MONO_HOME:$PATH"
 
 export PATH="/Users/a3/.bin:$PATH"
-export PATH="/usr/local/bin:/usr/local/opt/gnu-getopt/bin:$PATH"
 
 # android sdk tools
 export PATH="/usr/local/Caskroom/android-sdk/23.0/tools:$PATH"
@@ -28,7 +27,7 @@ export PATH=$ANDROID_NDK:$PATH
 export UNITY_VERSION5="5.6.3f1"
 export UNITY_VERSION=${UNITY_VERSION5}
 export UNITY_ROOT="/Applications/Unity/${UNITY_VERSION}/Unity.app"
-export PATH="${UNITY_ROOT}/Contents/MacOS:$PATH"
+alias unity="${UNITY_ROOT}/Contents/MacOS/Unity"
 export HOST_USER="cn"
 
 export GRADLE_ROOT="/Applications/AndroidStudio.app/Contents/gradle/gradle-4.6"
@@ -37,5 +36,5 @@ export PATH="${GRADLE_ROOT}/bin:${PATH}"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/a3/.sdkman"
 [[ -s "/Users/a3/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/a3/.sdkman/bin/sdkman-init.sh"
+
 alias q=exit
-export MAYA_UI_LANGUAGE=zh_CN
