@@ -1,0 +1,54 @@
+[user]
+	email = cool_navy@qq.com
+	name = cn
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
+[core]
+    #autocrlf=false
+    #autocrlf=true
+    quotepath = false
+	excludesfile = /Users/a3/.gitignore_global
+[alias]
+    au = add -u
+    br = branch
+    brg = log --graph --all --decorate --simplify-by-decoration --oneline
+	ci = commit -m
+    co = checkout
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+    df = diff -w
+	dfex = difftool -x diffExcel
+	gg = "log --format=\"%C(red)%h%Creset | %ar | %Cred%cn%Creset | %s \""
+	ggg = "log --graph --format=\"%h | %ar | %cn | %s | %b\""
+    sl = "svn log --show-commit --oneline"
+    sw = "show -w --ext-diff"
+    sdc = "svn dcommit --rmdir"
+	st = status
+    stn = status -uno
+    sn = show --name-status
+    pop = stash pop
+    rbc = rebase --continue
+    rbi = "!f() { git rebase -i HEAD~${1}; }; f"
+	up = "!git remote update -p; git merge --ff-only @{u}"
+    wt = worktree
+
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/cn/.stCommitMsg
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[diff "excel"]
+	command = diffExcel $LOCAL $REMOTE
