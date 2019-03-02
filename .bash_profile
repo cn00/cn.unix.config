@@ -1,7 +1,7 @@
 
 
 
-source ~/.bashcn
+source ~/.bashcn.sh
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -11,6 +11,13 @@ export MONO_HOME="/Library/Frameworks/Mono.framework/Versions/Current/Commands"
 export PATH="$MONO_HOME:$PATH"
 
 export PATH="/Users/a3/.bin:$PATH"
+
+# flutter
+export FLUTTER_ROOT="/Users/a3/ws/flutter"
+export FLUTTER_FRAMEWORK_DIR="$FLUTTER_ROOT/bin/cache/artifacts/engine/ios"
+export PATH="$FLUTTER_ROOT/bin:$PATH"
+export PUB_HOSTED_URL="https://pub.flutter-io.cn"
+export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 # android sdk tools
 export PATH="/usr/local/Caskroom/android-sdk/23.0/tools:$PATH"

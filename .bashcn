@@ -20,7 +20,7 @@ alias cls='printf "\33c\r"'
 alias ls='ls -G -p'
 alias ll='ls -l -G -p'
 alias ldd='otool -L'
-alias rm='trash -av'
+alias rm='trash -v'
 alias tttt='less $1'
 alias grep='grep --exclude-dir=.svn --exclude-dir=.git --color=always'
 alias egrep='egrep --color'
@@ -29,8 +29,9 @@ alias gsvn='git svn'
 alias aloss='aliyuncli oss'
 alias alrds='aliyuncli rds'
 alias adbi='adb install -r'
+alias altool='/Applications/Xcode.app/Contents/Developer/usr/bin/altool'
 
-export LANG=zh_CN.UTF-8
+export LANG=en_US.UTF-8
 
 ## for sed
 #export LC_COLLATE='C'
@@ -39,11 +40,9 @@ export LANG=zh_CN.UTF-8
 export ossmfsn="oss://mfsn-sc-patch-oss"
 
 alias ws="cd ~/ws"
-alias and="cd ~/ws/a3/and"
-alias andr="cd ~/ws/a3/and/client/Unity/Assets/Application/Resource"
-alias ios="cd ~/ws/a3/ios"
-alias iosr="cd ~/ws/a3/ios/client/Unity/Assets/Application/Resource"
-alias utest="cd ~/ws/unity_test/"
+alias c="cd ~/ws/a3/c"
+alias r="cd ~/ws/a3/c/client/Unity/Assets/Application/Resource"
+alias t="cd ~/ws/unity_test/"
 alias p="cd - &>/dev/null"
 alias .="cd .."
 alias ..="cd ../.."
@@ -52,8 +51,11 @@ alias ....="cd ../../../.."
 alias .....="cd ../../../../.."
 
 alias g="git"
+alias ga="git add -u"
 alias gg="git gg"
 alias csvn="svn --username lenghaijun --password "
+
+alias dbj="ssh dbj"
 
 alias unityc='Unity -projectPath $(pwd)'
 
@@ -72,4 +74,3 @@ export PATH=$PATH:/Users/a3/bin
 
 eval $(thefuck --alias)
 alias dk=docker
-export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
